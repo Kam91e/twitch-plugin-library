@@ -1,0 +1,3 @@
+# Node.js artifacts (OpenSpec CLI)
+node_modules/
+package-lock.json
