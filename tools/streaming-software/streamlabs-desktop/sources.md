@@ -8,7 +8,9 @@ platforms:
 price: "Freemium"
 url: "https://streamlabs.com"
 parent: "Streamlabs Desktop"
-last-reviewed: 2026-08-01
+version: "1.21.9"
+app-evidence: "/mnt/d/Twitch/shots/"
+last-reviewed: 2026-08-21
 ---
 
 # Sources
@@ -20,6 +22,12 @@ last-reviewed: 2026-08-01
 Sources and widgets are the building blocks of your stream layout — the visual and audio elements your viewers see inside a scene. Streamlabs Desktop inherits the core OBS source engine, so capture and media sources behave much like OBS Studio, and adds Streamlabs-specific sources (Screen Capture, Auto Game Capture, Game Pulse, Reactive Source, Spout2, OpenVR, and widgets-as-sources). To add a source, click the **+** icon in the Sources panel and choose from the list. Source order matters: sources higher in the list render in front — drag your webcam to the top so it sits in front of gameplay.
 
 The groups below mirror the application's own "Add Source" menu. A few sources appear in more than one group; they are described once with a note listing all groups where the app shows them.
+
+> **v1.21.9 evidence — Add Source flow:** Click `+` in the **Sources** panel at window-relative `(676,578)` → screen `(668,570)` → `slobs-addsource-dialog.png` (712 KB) captures the source type list (Essentials / Capture Sources / Video and Audio / Media / Widgets groups as listed below). The dialog was opened, captured, then cancelled with `ESC` → `slobs-addsource-try2-verify.png` confirms the Editor state (Scenes = Starting Soon/Ted Talk/Screen/Gaming/Window/BRB) was restored. The Scenes-side counterpart is `slobs-addscene-dialog.png` (411 KB) via `(296,578)`. Per-source configuration (right-click source → Properties) was attempted but no dedicated dialog was captured — **I couldn't verify this** (marked unverified in gaps).
+
+**Evidence:** `slobs-addsource-dialog.png`, `slobs-addsource-try2-verify.png`, `slobs-addscene-dialog.png`, `slobs-protocol-addscene-open.png`
+
+> **Note:** Layouts are app-only containers under Editor → Layout Editor (see [Layout Editor](layout-editor.md)), distinct from Scenes which are shown on stream (see [Scenes & Transitions](scenes-and-transitions.md)).
 
 ## Essentials
 
@@ -255,6 +263,12 @@ Streamlabs Desktop sources, scenes, and recording state can be controlled from S
 - [Streamer.bot — Streamlabs Desktop sub-actions](../../automation/streamer-bot/sub-actions/streamlabs-desktop/index.md) — control sources (visibility, mute, flip, rotate), scenes, groups, and recording/streaming state
 - [Streamer.bot — Streamlabs Desktop triggers](../../automation/streamer-bot/triggers/streamlabs-desktop.md) — fire actions on connection, streaming, recording, and scene changes
 - [Streamer.bot — Streamlabs integration triggers](../../automation/streamer-bot/triggers/integrations/streamlabs.md) — donations, charity donations, and merchandise events
+
+## Evidence gaps
+
+- Per-source **Properties / Filters** dialog (right-click source → Properties) — no dedicated dialog captured; `slobs-addsource-dialog.png` shows the Add Source list, not per-source config; I couldn't verify this.
+- Scene Collections **per-source configuration for at least one source type** — attempted for Text (GDI+) / Image 3 but not captured as distinct modal; unverified.
+- Advanced per-source audio properties — not captured; see `mixer.md` gaps.
 
 ## Tips
 

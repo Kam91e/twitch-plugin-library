@@ -7,7 +7,7 @@ platforms:
   - macOS
 price: "Freemium"
 url: "https://streamlabs.com"
-last-reviewed: 2026-08-01
+last-reviewed: 2026-08-21
 ---
 
 # Streamlabs Desktop
@@ -52,15 +52,28 @@ Streamlabs Desktop integrates with Twitch natively through the Streamlabs platfo
 - **Streamlabs Console** — an app on PlayStation and Xbox that lets you stream directly from the console, without a capture card
 - **Streamlabs Mobile** — a companion mobile app for monitoring and managing your stream on the go
 
+## UI Reference (v1.21.9)
+
+The following reference pages document the Streamlabs Desktop 1.21.9 UI as captured live (screenshots in `/mnt/d/Twitch/shots/`, non-destructive protocol):
+
+- [Sidebar Reference](sidebar-reference.md) — all sidebar sections top-to-bottom: Editor (Editor, Layout Editor, Studio Mode), Overlays (Scene, Alerts and Widgets), App Store (App Store Home, App Manager), Highlighter [beta], Recordings, Get Ultra, Dashboard (Dashboard Home, Cloudbot, Alert Box Settings, Widgets, Tip Settings, Multistream), Get Help, Settings, account `kameo_s` — expandable vs. navigation, caret ^/v, multi-expand, teal active highlight, vertical scroll.
+- [Mixer](mixer.md) — audio Mixer dock: Desktop Audio −10.8 dB / Mic/Aux 0.0 dB rows, slider + meter + lock/gear icons, volume drag and mute (unverified), advanced properties (unverified), scroll with many sources (unverified, see Evidence gaps).
+- [Settings](settings.md) — how to open via sidebar gear icon; expected sections General/Stream/Output/Audio/Video/Hotkeys/Scene Collections/Appearance/Notifications/Advanced — window not captured successfully, all sections marked unverified per zero-hallucination policy.
+- [Scenes & Transitions](scenes-and-transitions.md) — deepened with evidence: Scenes panel `Untitled ⊕` (6 scenes: Starting Soon/Ted Talk/Screen/Gaming/Window/BRB), Add Scene via `+` at `(296,578)` → `slobs-addscene-dialog.png`, Add Source via `+` at `(676,578)` → `slobs-addsource-dialog.png`, Scene Collections `Untitled` dropdown, per-source config and Transitions/Studio Mode/Hotkeys/Instant Replay gaps.
+- [Sources](sources.md) — deepened with Add Source flow evidence (`slobs-addsource-dialog.png` 712 KB) and per-source config gaps.
+- [Layout Editor](layout-editor.md) — **app-only** layouts (Test Elements / Test Elements 2) vs stream-visible scenes; Layouts grid (6 tiles), Elements palette (9 items), canvas basics, Save New Tab dialog — v1.21.9.
+
+Also see: [Audio & Hotkeys](audio-and-hotkeys.md) (topic-level audio pipeline, filters, monitoring) and [Alerts & Cloudbot](alerts-and-cloudbot.md).
+
 ## Configuration
 
-- **Scene management**: similar to OBS — add sources, arrange layers, set transitions
-- **Alert settings**: configure which events trigger alerts, customise appearance and sound per event
+- **Scene management**: similar to OBS — add sources, arrange layers, set transitions — see [Scenes & Transitions](scenes-and-transitions.md) and [Sources](sources.md) for the v1.21.9 UI.
+- **Alert settings**: configure which events trigger alerts, customise appearance and sound per event — see [Alerts & Cloudbot](alerts-and-cloudbot.md)
 - **Cloudbot**: enable/disable, configure moderation rules, set up custom commands, schedule giveaways
 - **Theme editor**: customise colours, fonts, animations, and layout of overlay widgets
 - **Output settings**: resolution, bitrate, encoder selection (NVENC, AMD, x264), recording path
-- **Audio**: per-source volume, noise gate, compression, monitor settings
-- **Hotkeys**: assign keyboard shortcuts for scene switching, muting sources, start/stop stream
+- **Audio**: per-source volume, noise gate, compression, monitor settings — see [Mixer](mixer.md) and [Audio & Hotkeys](audio-and-hotkeys.md)
+- **Hotkeys**: assign keyboard shortcuts for scene switching, muting sources, start/stop stream — see [Audio & Hotkeys](audio-and-hotkeys.md); Hotkeys section in Settings remains unverified (see `settings.md` gaps)
 - **Ultra features**: enable multi-stream destinations, Dual Output, Collab Cam
 
 ## Tips & Tricks
